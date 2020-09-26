@@ -14,7 +14,7 @@ visit deployed: https://guestconnect-6bbb5.web.app/?
     JavaScript, React.js, SASS, ContextAPI.
 
 1.  Language:
-    I chose to work with JavaScript for this excercise, due to its object oriented nature, and my familiarity with it.
+    I chose to work with JavaScript for this exercise, due to its object oriented nature, and my familiarity with it.
 
 2.  Why React?
     React components are essentially objects, and Eva said "use objects" so I used them for everything. I tried to make them reusable as possible, for example my MenuOptions component does a check and conditionally renders the proper display, allowing me to pass the same component for multiple use cases. While envisioning a solution, I couldn't help but think of using context api (similar to redux but easier to set up) as a way to store and manipulate the data provided. I stored the selected guest and company in state and used those for template generation in my ChatOption component. Using Contexts would also make future feature implementation easy, (Ie auth can be added by simply adding user to the reducer.) I already started making a sent state array, which could hold all sent messages for instance.
