@@ -51,8 +51,15 @@ function ChatOptions() {
             />
             <div className="chatOptions__info">
               <h3>keeping deposit</h3>
-              <p>{`Good ${greeting} ${guest[0]?.firstName}, we're keeping the safety deposit for room ${guest[0]?.roomNumber}.
-           you can find out more at ${hotel[0]?.company}.com`}</p>
+              <p>{`Good ${greeting} ${
+                guest[0]?.firstName
+              }, we're keeping the safety deposit for room ${
+                guest[0]?.roomNumber
+              }.
+           you can find out more at ${hotel[0]?.company
+             .split(" ")
+             .join("")
+             .toLowerCase()}.com`}</p>
             </div>
           </label>
         </div>
