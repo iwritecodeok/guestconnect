@@ -2,6 +2,8 @@
 
 ## Instructions for start up,
 
+visit deployed: https://guestconnect-6bbb5.web.app/?
+
 1. Clone this repository to your local machine.
 2. Open the repository in your editor of choice.
 3. Open the terminal and enter (npm i)
