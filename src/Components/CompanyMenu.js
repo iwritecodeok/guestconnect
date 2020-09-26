@@ -1,10 +1,13 @@
 import React from "react";
 import CompanyData from "../Data/Companies.json";
 import MenuOption from "./MenuOption";
+import "../Styles/GuestMenu.scss";
 
 function CompanyMenu() {
   return (
-    <div className="companyMenu">
+    <div className="guestMenu">
+      <h3>Hotel Partners</h3>
+      <hr />
       {CompanyData.map((company) => (
         <MenuOption
           key={company.id}

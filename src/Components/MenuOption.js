@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useStateValue } from "../Contexts/StateProvider";
+import "../Styles/GuestMenu.scss";
 
 function MenuOption({
   id,
@@ -11,8 +12,6 @@ function MenuOption({
   timezone,
 }) {
   const [{ guest }, dispatch] = useStateValue();
-
-  const [guestInfo, setGuestInfo] = useState(null);
 
   const addGuest = () => {
     // dispatch to state
@@ -41,20 +40,18 @@ function MenuOption({
   return (
     <div className="menuOption">
       {firstName ? (
-        <div className="menuOption__guest">
+        <div className="menuOption__guest" onClick={addGuest}>
           <h3>
-            {id} {lastName}, {firstName}
+            {lastName}, {firstName}
           </h3>
-          <p>Room #: {roomNumber}</p>
-          <button onClick={addGuest}>select guest</button>
         </div>
       ) : (
-        <div className="menuOption__company">
+        <div className="menuOption">
           <h3>{company}</h3>
-          <p>
-            Location: {city}, Timezone: {timezone}
-          </p>
-          <button onClick={addHotel}>select hotel</button>
+
+          <button className="menuOption" onClick={addHotel}>
+            select hotel
+          </button>
         </div>
       )}
     </div>

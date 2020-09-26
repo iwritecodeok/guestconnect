@@ -8,10 +8,12 @@ function App() {
   return (
     <div className="app">
       {/* select guest  */}
-      <GuestMenu />
-      {/* if guest in state show companies */}
-      {/* select company */}
-      <CompanyMenu />
+      <div className="app__left">
+        <GuestMenu />
+        {/* if guest in state show companies */}
+        {/* select company */}
+        <CompanyMenu />
+      </div>
       {/* if company in state show message menu */}
       <Chat />
       {/* display message  :: for value set generated info as the default for the input box*/}

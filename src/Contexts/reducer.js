@@ -1,10 +1,10 @@
 export const initialState = {
   guest: [],
   hotel: [],
+  sent: [],
 };
 
 const reducer = (state, action) => {
-  console.log(action);
   switch (action.type) {
     case "ADD_GUEST":
       return {
@@ -15,6 +15,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         hotel: [action.hotel],
+      };
+    case "SEND_MESSAGE":
+      return {
+        ...state,
+        sent: [...state.sent, action.message],
       };
     default:
       return state;

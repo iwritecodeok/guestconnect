@@ -1,35 +1,24 @@
 import React from "react";
 import { useStateValue } from "../Contexts/StateProvider";
-
+import "../Styles/Chat.scss";
+import ChatOptions from "./ChatOptions";
 function Chat() {
   const [{ guest, hotel }] = useStateValue();
-
-  console.log("HERE", guest, hotel);
-  const greeting = getGreeting();
-  function getGreeting() {
-    let today = new Date();
-    let hours = today.getHours();
-
-    if (hours > 5 && hours < 12) {
-      return "morning";
-    } else if (hours >= 12 && hours < 18) {
-      return "afternoon";
-    } else {
-      return "evening";
-    }
-  }
 
   return (
     <div className="chat">
       <div className="chat__container">
+        {/* rendering of chatOptions is conditional, if no guest in state will show select guest  */}
         {!guest[0] ? (
           <p>Please select a guest</p>
+        ) : !hotel[0] && guest[0] ? (
+          <div className="chat__hotel">
+            <p> {`Where is ${guest[0].firstName} staying?`}</p>
+          </div>
         ) : (
-          <p>
-            {`Good ${greeting} ${guest[0]?.firstName}, and welcome to ${hotel[0]?.company}! 
-          Room ${guest[0]?.roomNumber}`}{" "}
-            is now ready for you.
-          </p>
+          <div className="chat__selection">
+            <ChatOptions />
+          </div>
         )}
       </div>
     </div>
@@ -37,5 +26,3 @@ function Chat() {
 }
 
 export default Chat;
-// "Good morning Ethan, and welcome to Hotel California! Room 304 is now ready you. Enjoy your stay, and let us know if you
-// need anything."
