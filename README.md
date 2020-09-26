@@ -1,6 +1,6 @@
 # guestConnect
 
-## Instructions for start up,
+## Instructions for start up:
 
 visit deployed: https://guestconnect-6bbb5.web.app/?
 
@@ -9,7 +9,7 @@ visit deployed: https://guestconnect-6bbb5.web.app/?
 3. Open the terminal and enter (npm i)
 4. Once everything is done installing, in the terminal enter (npm start)
 
-## Tech stack & reasoning.
+## Tech stack & Reasoning:
 
     JavaScript, React.js, SASS, ContextAPI.
 
