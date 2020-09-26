@@ -2,7 +2,10 @@
 
 ## Instructions for start up,
 
-- in console type; (npm i ) followed by (npm start).
+1. Clone this repository to your local machine.
+2. Open the repository in your editor of choice.
+3. Open the terminal and enter (npm i)
+4. Once everything is done installing, in the terminal enter (npm start)
 
 ## Tech stack & reasoning.
 
