@@ -1,11 +1,20 @@
 import React from "react";
-import "./Styles/App.css";
-import DashBoard from "./Components/DashBoard";
+import GuestMenu from "./Components/GuestMenu";
+import CompanyMenu from "./Components/CompanyMenu";
+import Chat from "./Components/Chat";
+import "./Styles/App.scss";
 
 function App() {
   return (
     <div className="app">
-      <DashBoard />
+      {/* select guest  */}
+      <GuestMenu />
+      {/* if guest in state show companies */}
+      {/* select company */}
+      <CompanyMenu />
+      {/* if company in state show message menu */}
+      <Chat />
+      {/* display message  :: for value set generated info as the default for the input box*/}
     </div>
   );
 }
