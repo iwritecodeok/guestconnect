@@ -46,17 +46,17 @@ Have some sort of structure or object for working with template messages that ha
 roomNumber, etc.) embedded in them
 
 - [x] Load in message template information from a JSON file that you will have had created. Structure the file however you see fit can be found
-       **can be found in  Components/ChatOptions**
-- [x] Load in guest and company information from the JSON files that we have provided
-      **can be found in Components/GuestMenu & Components/CompanyMenu**
+        **can be found in  Components/ChatOptions**
+- [x] Load in guest and company information from the JSON files that we have provided.
+        **can be found in Components/GuestMenu & Components/CompanyMenu**
 - [x] Support a greeting variable that will change based on the time of day (e.g. "Good morning" / "Good afternoon" / "Good evening")
-      **can be found in  Components/ChatOptions**
+        **can be found in  Components/ChatOptions**
 - [x] Allow the user to specify which guest and which company should be used to populate template messages.
-       - **this is handled by the on click events, and contexts. can be found in Components/MenuOptions**
+         **this is handled by the on click events, and contexts. can be found in Components/MenuOptions**
 - [x] Allow the user to either select one of the message templates that was loaded in from the JSON file or to enter in a new message template.
-       - **I interperated this as a way for the user to create their own message.**
+         **I interperated this as a way for the user to create their own message.**
 - [x] Generate a final message output that is a result of populating the specified variables of the message template with the correct values from the other data
-      - **accomplished using radial button selection for pregenerated templates, and an input for a custom input. I wanted to add predictive text, to better assist the user       with proper data entry.** 
+         **accomplished using radial button selection for pregenerated templates, and an input for a custom input. I wanted to add predictive text, to better assist the user       with proper data entry.** 
 
 You can use any programming language you like. We care more about how you approach the problem than what specific languages you are
 proficient in. ***No GUI element is required (I saw this late, but on the plus side now everyone can check it out! )***, but feel free to expand in that direction if it suits you.
