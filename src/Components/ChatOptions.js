@@ -85,7 +85,11 @@ function ChatOptions() {
             </div>
           </label>
         </div>
-        <button>send</button>
+        {checked ? (
+          <button>send message</button>
+        ) : (
+          <p>please make a selection</p>
+        )}
       </form>
     </div>
   );
