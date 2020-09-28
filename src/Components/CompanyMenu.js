@@ -11,7 +11,6 @@ function CompanyMenu() {
       {CompanyData.map((company) => (
         <MenuOption
           key={company.id}
-          id={company.id}
           company={company.company}
           city={company.city}
           timezone={company.timezone}

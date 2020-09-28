@@ -13,7 +13,6 @@ function GuestMenu() {
       {GuestData.map((guest) => (
         <MenuOption
           key={guest.id}
-          id={guest.id}
           firstName={guest.firstName}
           lastName={guest.lastName}
           roomNumber={guest.reservation.roomNumber}

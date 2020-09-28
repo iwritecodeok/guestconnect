@@ -48,7 +48,6 @@ function MenuOption({
       ) : (
         <div className="menuOption">
           <h3>{company}</h3>
-
           <button className="menuOption" onClick={addHotel}>
             select hotel
           </button>
