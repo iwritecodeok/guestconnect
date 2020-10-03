@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Template from "../Data/Templates.json";
+import "../Styles/Chat.scss";
 
 function TemplateSelect({
   id,
@@ -26,7 +27,7 @@ function TemplateSelect({
             <label>
               <input
                 type="radio"
-                value={id}
+                value={template.id}
                 onChange={(e) => setChecked(e.target?.value)}
                 checked={checked === template.id}
               />
