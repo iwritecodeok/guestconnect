@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useStateValue } from "../Contexts/StateProvider";
 import "../Styles/Chat.scss";
+
 import TemplateOptions from "./TemplateOptions";
 
 function ChatOptions() {

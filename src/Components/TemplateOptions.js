@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Template from "../Data/Templates.json";
 import "../Styles/Chat.scss";
+import CustomInput from "./CustomInput";
 
 function TemplateOptions({
   id,
@@ -10,7 +11,6 @@ function TemplateOptions({
   company,
   companyWeb,
 }) {
-  const [input, setInput] = useState("");
   const [checked, setChecked] = useState("");
 
   String.prototype.interpolate = function (templatedetails) {
@@ -24,48 +24,33 @@ function TemplateOptions({
       <form>
         {Template.map((template) => (
           <div className=" chatOptions__radio" key={template.id}>
-            <label>
-              <input
-                type="radio"
-                value={template.id}
-                onChange={(e) => setChecked(e.target?.value)}
-                checked={checked === template.id}
-              />
-              <div className="chatOptions__info">
-                <h3>{template.title}</h3>
-                {template ? (
-                  <p>
-                    {template.message.interpolate({
-                      firstName: firstName,
-                      roomNumber: room,
-                      greeting: greeting,
-                      company: company,
-                      companyWeb: companyWeb,
-                    })}
-                  </p>
-                ) : (
-                  <p> uh oh! </p>
-                )}
-              </div>
-            </label>
+            <input
+              type="radio"
+              value={template.title}
+              onChange={(e) => setChecked(e.target?.value)}
+              checked={checked === template.title}
+            />
+            <div className="chatOptions__info">
+              <h3>{template.title}</h3>
+              {template ? (
+                <p>
+                  {template.message.interpolate({
+                    firstName: firstName,
+                    roomNumber: room,
+                    greeting: greeting,
+                    company: company,
+                    companyWeb: companyWeb,
+                  })}
+                </p>
+              ) : (
+                <p> uh oh! </p>
+              )}
+            </div>
           </div>
         ))}
-        <div className="chatOptions__custom">
-          <h3>Custom response</h3>
-          <input
-            className="custom__input"
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            checked={checked === { input }}
-          />
-        </div>
-        {checked ? (
-          <button>send message</button>
-        ) : (
-          <p>please make a selection</p>
-        )}
+        <CustomInput />
       </form>
+      {checked ? <button>send message</button> : <p>please make a selection</p>}
     </div>
   );
 }

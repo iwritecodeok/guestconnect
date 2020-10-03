@@ -2,6 +2,7 @@ import React from "react";
 import { useStateValue } from "../Contexts/StateProvider";
 import "../Styles/Chat.scss";
 import ChatOptions from "./ChatOptions";
+import "../Styles/Chat.scss";
 function Chat() {
   const [{ guest, hotel }] = useStateValue();
 
