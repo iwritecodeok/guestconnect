@@ -26,7 +26,7 @@ function TemplateSelect({
             <label>
               <input
                 type="radio"
-                value={template.id}
+                value={id}
                 onChange={(e) => setChecked(e.target?.value)}
                 checked={checked === template.id}
               />
@@ -43,23 +43,22 @@ function TemplateSelect({
                     })}
                   </p>
                 ) : (
-                  <p> uh oh </p>
+                  <p> uh oh! </p>
                 )}
               </div>
             </label>
           </div>
         ))}
-
-        <section className="chatOptions__custom">
+        <div className="chatOptions__custom">
           <h3>Custom response</h3>
           <input
             className="custom__input"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            checked={checked === { input }}
           />
-        </section>
-
+        </div>
         {checked ? (
           <button>send message</button>
         ) : (
