@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useStateValue } from "../Contexts/StateProvider";
 import "../Styles/Chat.scss";
-import TemplateSelect from "./TemplateSelect";
+import TemplateOptions from "./TemplateOptions";
 
 function ChatOptions() {
   const [{ guest, hotel }] = useStateValue();
@@ -26,7 +26,7 @@ function ChatOptions() {
 
   return (
     <div className="chatOptions">
-      <TemplateSelect
+      <TemplateOptions
         id={guest[0].id}
         firstName={guest[0].firstName}
         room={guest[0].roomNumber}

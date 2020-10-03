@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Template from "../Data/Templates.json";
 import "../Styles/Chat.scss";
 
-function TemplateSelect({
+function TemplateOptions({
   id,
   firstName,
   room,
@@ -70,4 +70,4 @@ function TemplateSelect({
   );
 }
 
-export default TemplateSelect;
+export default TemplateOptions;

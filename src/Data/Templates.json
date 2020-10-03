@@ -12,6 +12,6 @@
   {
     "id": 3,
     "title": "want room service?",
-    "message": "Good ${greeting}, ${firstName} ${company} Would like to welcome you with food. enjoy your stay in Room #${roomNumber}!"
+    "message": "Good ${greeting} ${firstName}, ${company} Would like to welcome you with food please let us know what our staff can prepare for you. enjoy your stay in Room #${roomNumber}!"
   }
 ]
