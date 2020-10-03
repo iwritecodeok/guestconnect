@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "welcome",
+    "message": "Good ${greeting}, ${firstName} and welcome to ${company}! Room #${roomNumber} is now ready for you!"
+  },
+  {
+    "id": 2,
+    "title": "fine",
+    "message": "Good ${greeting} , ${firstName}. We wish to inform you that we will be keeping your deposit. You can find out more at ${companyWeb}.com."
+  },
+  {
+    "id": 3,
+    "title": "want room service?",
+    "message": "Good ${greeting}, ${firstName} ${company} Would like to welcome you with food. enjoy your stay in Room #${roomNumber}!"
+  }
+]
