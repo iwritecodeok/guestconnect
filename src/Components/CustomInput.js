@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../Styles/Chat.scss";
 function CustomInput() {
   const [input, setInput] = useState("");
   const [checked, setChecked] = useState("");

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStateValue } from "../Contexts/StateProvider";
 import "../Styles/Chat.scss";
 
